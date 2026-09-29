@@ -1,8 +1,8 @@
-# University Research Opportunity Portal
+ University Research Opportunity Portal
 
 A full-stack web app where faculty can post, view, update, close and delete research opportunities.
 
-**GitHub Repository:** https://github.com/YOUR_USERNAME/research-opportunity-portal  <!-- TODO: replace with your real link -->
+**GitHub Repository:** https://github.com/ta-hayasin/Research-Opportunity-Portal  <!-- TODO: replace with your real link -->
 
 **Tech stack:** Node.js + Express (REST API) · MySQL · HTML/CSS/vanilla JavaScript frontend
 
@@ -82,3 +82,5 @@ The collection covers: creating 3 opportunities, get all, get one, update, Open�
 
 ## Security
 No passwords or secrets are committed. Use `backend/.env` (ignored by git) for credentials.
+=======
+# Research_Opportunity_Portal
