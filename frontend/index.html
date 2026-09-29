@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Opportunity Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Research Opportunity Portal</h1>
+    <button id="newBtn" class="btn primary">+ New Opportunity</button>
+  </header>
+
+  <div id="alert" class="alert hidden" role="alert"></div>
+
+  <main>
+    <section id="listSection">
+      <h2>All Opportunities</h2>
+      <div id="list" class="grid"></div>
+    </section>
+  </main>
+
+  <!-- Details modal -->
+  <div id="detailModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" data-close="detailModal">&times;</button>
+      <div id="detailBody"></div>
+    </div>
+  </div>
+
+  <!-- Form modal -->
+  <div id="formModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close" data-close="formModal">&times;</button>
+      <h2 id="formTitle">New Opportunity</h2>
+      <form id="oppForm" novalidate>
+        <input type="hidden" id="oppId" />
+
+        <label>Research Title *
+          <input type="text" id="title" maxlength="255" />
+          <span class="err" id="err-title"></span>
+        </label>
+
+        <label>Description *
+          <textarea id="description" rows="4"></textarea>
+          <span class="err" id="err-description"></span>
+        </label>
+
+        <div class="row">
+          <label>Research Area *
+            <input type="text" id="research_area" />
+            <span class="err" id="err-research_area"></span>
+          </label>
+          <label>Department *
+            <input type="text" id="department" />
+            <span class="err" id="err-department"></span>
+          </label>
+        </div>
+
+        <label>Faculty Member Name *
+          <input type="text" id="faculty_name" />
+          <span class="err" id="err-faculty_name"></span>
+        </label>
+
+        <label>Required Skills * <small>(comma separated)</small>
+          <input type="text" id="required_skills" />
+          <span class="err" id="err-required_skills"></span>
+        </label>
+
+        <div class="row">
+          <label>Available Positions *
+            <input type="number" id="available_positions" min="0" step="1" />
+            <span class="err" id="err-available_positions"></span>
+          </label>
+          <label>Application Deadline *
+            <input type="date" id="application_deadline" />
+            <span class="err" id="err-application_deadline"></span>
+          </label>
+          <label>Status *
+            <select id="status">
+              <option value="Open">Open</option>
+              <option value="Closed">Closed</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="btn" data-close="formModal">Cancel</button>
+          <button type="submit" class="btn primary" id="saveBtn">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
